@@ -1,0 +1,1741 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Yanto Goutama — Business Systems & Governance Advisor | GRC Consultant | Executive Business & Governance Consultant." />
+  <meta name="author" content="Yanto Goutama" />
+  <meta name="theme-color" content="#0b0d0f" />
+
+  <title>Yanto Goutama | Business Systems & Governance Advisor</title>
+
+  <style>
+    :root {
+      --bg: #0b0d0f;
+      --bg-soft: #111417;
+      --card: #15191d;
+      --card-2: #191e23;
+      --text: #f4f5f6;
+      --muted: #a4abb2;
+      --line: rgba(255,255,255,.09);
+      --accent: #d7b56d;
+      --accent-soft: rgba(215,181,109,.12);
+      --white: #ffffff;
+      --max: 1180px;
+      --radius: 18px;
+      --transition: .3s ease;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family:
+        Inter,
+        ui-sans-serif,
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+      overflow-x: hidden;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .container {
+      width: min(100% - 40px, var(--max));
+      margin: auto;
+    }
+
+    /* =========================
+       NAVIGATION
+    ========================== */
+
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      background: rgba(11,13,15,.72);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid transparent;
+      transition: var(--transition);
+    }
+
+    header.scrolled {
+      border-bottom-color: var(--line);
+      background: rgba(11,13,15,.94);
+    }
+
+    .nav {
+      height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .brand {
+      font-weight: 800;
+      letter-spacing: -.03em;
+      font-size: 1.05rem;
+    }
+
+    .brand span {
+      color: var(--accent);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 28px;
+      align-items: center;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: var(--muted);
+      font-size: .88rem;
+      transition: var(--transition);
+    }
+
+    .nav-links a:hover {
+      color: var(--white);
+    }
+
+    .nav-cta {
+      border: 1px solid var(--accent);
+      color: var(--accent) !important;
+      padding: 9px 16px;
+      border-radius: 999px;
+    }
+
+    .nav-cta:hover {
+      background: var(--accent);
+      color: #111 !important;
+    }
+
+    .menu-btn {
+      display: none;
+      background: none;
+      border: none;
+      color: white;
+      font-size: 1.6rem;
+      cursor: pointer;
+    }
+
+    /* =========================
+       HERO
+    ========================== */
+
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+      padding-top: 80px;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      width: 650px;
+      height: 650px;
+      border-radius: 50%;
+      background: rgba(215,181,109,.07);
+      filter: blur(100px);
+      right: -250px;
+      top: 50px;
+      pointer-events: none;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.25fr .75fr;
+      gap: 70px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      color: var(--accent);
+      font-size: .78rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .16em;
+      margin-bottom: 24px;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 28px;
+      height: 1px;
+      background: var(--accent);
+    }
+
+    .hero h1 {
+      font-size: clamp(3rem, 7vw, 6.2rem);
+      line-height: .96;
+      letter-spacing: -.065em;
+      max-width: 850px;
+      margin-bottom: 30px;
+    }
+
+    .hero h1 span {
+      color: var(--accent);
+    }
+
+    .hero-description {
+      max-width: 690px;
+      color: var(--muted);
+      font-size: 1.08rem;
+      margin-bottom: 36px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 13px 21px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      font-size: .9rem;
+      font-weight: 700;
+      transition: var(--transition);
+      cursor: pointer;
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: #111;
+      border-color: var(--accent);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 35px rgba(215,181,109,.2);
+    }
+
+    .btn-secondary {
+      color: var(--text);
+    }
+
+    .btn-secondary:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+
+    .hero-card {
+      border: 1px solid var(--line);
+      background: linear-gradient(145deg, var(--card), rgba(21,25,29,.65));
+      padding: 34px;
+      border-radius: 24px;
+      position: relative;
+    }
+
+    .hero-card::after {
+      content: "";
+      position: absolute;
+      width: 70px;
+      height: 70px;
+      border-top: 1px solid var(--accent);
+      border-right: 1px solid var(--accent);
+      top: -1px;
+      right: -1px;
+      border-radius: 0 24px 0 0;
+    }
+
+    .hero-card small {
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: .12em;
+      font-size: .7rem;
+    }
+
+    .hero-card h3 {
+      margin: 18px 0;
+      font-size: 1.5rem;
+      line-height: 1.25;
+    }
+
+    .hero-card p {
+      color: var(--muted);
+      font-size: .9rem;
+    }
+
+    /* =========================
+       GENERAL
+    ========================== */
+
+    section {
+      padding: 110px 0;
+      border-top: 1px solid var(--line);
+    }
+
+    .section-label {
+      color: var(--accent);
+      font-size: .75rem;
+      text-transform: uppercase;
+      letter-spacing: .16em;
+      font-weight: 800;
+      margin-bottom: 14px;
+    }
+
+    .section-title {
+      font-size: clamp(2rem, 4vw, 3.5rem);
+      letter-spacing: -.045em;
+      line-height: 1.05;
+      margin-bottom: 20px;
+    }
+
+    .section-intro {
+      color: var(--muted);
+      max-width: 700px;
+      margin-bottom: 55px;
+    }
+
+    /* =========================
+       ABOUT
+    ========================== */
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: .85fr 1.15fr;
+      gap: 80px;
+    }
+
+    .about-statement {
+      font-size: 1.65rem;
+      line-height: 1.35;
+      letter-spacing: -.025em;
+    }
+
+    .about-statement span {
+      color: var(--accent);
+    }
+
+    .about-copy {
+      color: var(--muted);
+    }
+
+    .about-copy p + p {
+      margin-top: 18px;
+    }
+
+    /* =========================
+       CAPABILITIES
+    ========================== */
+
+    .capability-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .capability-card {
+      padding: 30px;
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      transition: var(--transition);
+    }
+
+    .capability-card:hover {
+      transform: translateY(-6px);
+      border-color: rgba(215,181,109,.4);
+    }
+
+    .number {
+      color: var(--accent);
+      font-size: .75rem;
+      font-weight: 800;
+      margin-bottom: 28px;
+    }
+
+    .capability-card h3 {
+      font-size: 1.2rem;
+      margin-bottom: 12px;
+    }
+
+    .capability-card p {
+      color: var(--muted);
+      font-size: .88rem;
+    }
+
+    /* =========================
+       BUSINESS CASES
+    ========================== */
+
+    .case-list {
+      display: grid;
+      gap: 18px;
+    }
+
+    .case {
+      display: grid;
+      grid-template-columns: 90px 1fr 180px;
+      gap: 30px;
+      align-items: center;
+      padding: 30px;
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      transition: var(--transition);
+    }
+
+    .case:hover {
+      border-color: rgba(215,181,109,.35);
+      transform: translateX(5px);
+    }
+
+    .case-number {
+      color: var(--accent);
+      font-size: .8rem;
+      font-weight: 800;
+    }
+
+    .case h3 {
+      font-size: 1.25rem;
+      margin-bottom: 7px;
+    }
+
+    .case p {
+      color: var(--muted);
+      font-size: .88rem;
+    }
+
+    .case-result {
+      text-align: right;
+      color: var(--accent);
+      font-weight: 800;
+      font-size: .82rem;
+    }
+
+    /* =========================
+       FRAMEWORKS
+    ========================== */
+
+    .framework-section {
+      background: var(--bg-soft);
+    }
+
+    .framework-grid {
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap: 25px;
+    }
+
+    .framework-main,
+    .framework-small {
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      background: var(--card);
+      padding: 38px;
+    }
+
+    .framework-main {
+      min-height: 390px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .framework-tag {
+      display: inline-block;
+      color: var(--accent);
+      background: var(--accent-soft);
+      padding: 6px 10px;
+      border-radius: 999px;
+      font-size: .7rem;
+      font-weight: 800;
+      margin-bottom: 22px;
+    }
+
+    .framework-main h3 {
+      font-size: 2.5rem;
+      letter-spacing: -.04em;
+      margin-bottom: 15px;
+    }
+
+    .framework-main p,
+    .framework-small p {
+      color: var(--muted);
+    }
+
+    .framework-formula {
+      margin-top: 25px;
+      padding: 20px;
+      border: 1px dashed rgba(215,181,109,.3);
+      border-radius: 14px;
+      color: var(--accent);
+      font-size: .9rem;
+      line-height: 1.8;
+    }
+
+    .framework-side {
+      display: grid;
+      gap: 18px;
+    }
+
+    .framework-small h3 {
+      margin-bottom: 10px;
+      font-size: 1.2rem;
+    }
+
+    /* =========================
+       JOURNEY
+    ========================== */
+
+    .timeline {
+      position: relative;
+      max-width: 900px;
+    }
+
+    .timeline::before {
+      content: "";
+      position: absolute;
+      left: 8px;
+      top: 5px;
+      bottom: 5px;
+      width: 1px;
+      background: var(--line);
+    }
+
+    .timeline-item {
+      position: relative;
+      padding-left: 42px;
+      padding-bottom: 45px;
+    }
+
+    .timeline-item:last-child {
+      padding-bottom: 0;
+    }
+
+    .timeline-dot {
+      position: absolute;
+      left: 3px;
+      top: 5px;
+      width: 11px;
+      height: 11px;
+      border-radius: 50%;
+      background: var(--accent);
+      box-shadow: 0 0 0 5px var(--bg);
+    }
+
+    .timeline-year {
+      color: var(--accent);
+      font-size: .75rem;
+      font-weight: 800;
+      letter-spacing: .1em;
+      margin-bottom: 7px;
+    }
+
+    .timeline-item h3 {
+      margin-bottom: 6px;
+      font-size: 1.15rem;
+    }
+
+    .timeline-item p {
+      color: var(--muted);
+      font-size: .88rem;
+    }
+
+    /* =========================
+       INSIGHTS
+    ========================== */
+
+    .insights-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .insight-card {
+      padding: 28px;
+      min-height: 240px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--card);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: var(--transition);
+    }
+
+    .insight-card:hover {
+      transform: translateY(-5px);
+      border-color: rgba(215,181,109,.4);
+    }
+
+    .insight-category {
+      color: var(--accent);
+      font-size: .7rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: .1em;
+    }
+
+    .insight-card h3 {
+      font-size: 1.25rem;
+      line-height: 1.3;
+      margin: 20px 0;
+    }
+
+    .insight-card a {
+      color: var(--muted);
+      font-size: .82rem;
+    }
+
+    .insight-card a:hover {
+      color: var(--accent);
+    }
+
+    /* =========================
+       CTA
+    ========================== */
+
+    .cta {
+      padding: 100px 0;
+      text-align: center;
+      background:
+        radial-gradient(circle at center, rgba(215,181,109,.09), transparent 55%),
+        var(--bg-soft);
+    }
+
+    .cta h2 {
+      font-size: clamp(2.5rem, 6vw, 5rem);
+      line-height: 1;
+      letter-spacing: -.06em;
+      max-width: 850px;
+      margin: 0 auto 25px;
+    }
+
+    .cta p {
+      color: var(--muted);
+      max-width: 600px;
+      margin: 0 auto 32px;
+    }
+
+    /* =========================
+       FOOTER
+    ========================== */
+
+    footer {
+      padding: 35px 0;
+      border-top: 1px solid var(--line);
+    }
+
+    .footer-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .footer-name {
+      font-weight: 800;
+    }
+
+    .footer-name span {
+      color: var(--accent);
+    }
+
+    .footer-copy {
+      color: var(--muted);
+      font-size: .78rem;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 18px;
+      color: var(--muted);
+      font-size: .8rem;
+    }
+
+    .footer-links a:hover {
+      color: var(--accent);
+    }
+
+    /* =========================
+       SCROLL REVEAL
+    ========================== */
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(25px);
+      transition: opacity .7s ease, transform .7s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* =========================
+       RESPONSIVE
+    ========================== */
+
+    @media (max-width: 900px) {
+
+      .hero-grid,
+      .about-grid,
+      .framework-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        padding-top: 130px;
+        padding-bottom: 80px;
+      }
+
+      .capability-grid,
+      .insights-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .case {
+        grid-template-columns: 60px 1fr;
+      }
+
+      .case-result {
+        grid-column: 2;
+        text-align: left;
+      }
+
+      .hero-card {
+        max-width: 600px;
+      }
+    }
+
+    @media (max-width: 700px) {
+
+      .container {
+        width: min(100% - 28px, var(--max));
+      }
+
+      .nav-links {
+        position: absolute;
+        top: 76px;
+        left: 14px;
+        right: 14px;
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+        background: #111417;
+        border: 1px solid var(--line);
+        padding: 15px;
+        border-radius: 15px;
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .nav-links a {
+        padding: 10px;
+      }
+
+      .menu-btn {
+        display: block;
+      }
+
+      .nav-cta {
+        text-align: center;
+      }
+
+      .hero h1 {
+        font-size: 3.25rem;
+      }
+
+      section {
+        padding: 80px 0;
+      }
+
+      .capability-grid,
+      .insights-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .case {
+        grid-template-columns: 1fr;
+        gap: 15px;
+      }
+
+      .case-result {
+        grid-column: auto;
+      }
+
+      .framework-main h3 {
+        font-size: 2rem;
+      }
+
+      .footer-inner {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- =========================
+       NAVIGATION
+  ========================== -->
+
+  <header id="header">
+    <div class="container nav">
+
+      <a href="#home" class="brand">
+        YANTO<span> GOUTAMA</span>
+      </a>
+
+      <button class="menu-btn" id="menuBtn" aria-label="Open menu">
+        ☰
+      </button>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about">About</a></li>
+        <li><a href="#capabilities">Capabilities</a></li>
+        <li><a href="#cases">Cases</a></li>
+        <li><a href="#frameworks">Frameworks</a></li>
+        <li><a href="#journey">Journey</a></li>
+        <li><a href="#insights">Insights</a></li>
+        <li><a href="#contact" class="nav-cta">Let's Talk</a></li>
+      </ul>
+
+    </div>
+  </header>
+
+
+  <!-- =========================
+       HERO
+  ========================== -->
+
+  <main>
+
+    <section class="hero" id="home">
+
+      <div class="container hero-grid">
+
+        <div class="reveal">
+
+          <div class="eyebrow">
+            Executive Business & Governance Consultant
+          </div>
+
+          <h1>
+            Building businesses that
+            <span>scale without chaos.</span>
+          </h1>
+
+          <p class="hero-description">
+            I help business owners, directors and executive teams turn
+            organizational complexity into clearer systems, stronger
+            governance and better execution.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#cases" class="btn btn-primary">
+              Explore My Work
+            </a>
+
+            <a href="#contact" class="btn btn-secondary">
+              Start a Conversation →
+            </a>
+          </div>
+
+        </div>
+
+
+        <div class="hero-card reveal">
+
+          <small>Core Perspective</small>
+
+          <h3>
+            People don't always fail because
+            they lack capability.
+          </h3>
+
+          <p>
+            Sometimes the real problem is the system surrounding them:
+            unclear authority, weak accountability, fragmented processes,
+            poor measurement and decisions without governance.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         ABOUT
+    ========================== -->
+
+    <section id="about">
+
+      <div class="container">
+
+        <div class="section-label reveal">
+          01 — Executive Profile
+        </div>
+
+        <div class="about-grid">
+
+          <div class="about-statement reveal">
+
+            <p>
+              Business performance is rarely
+              <span>just a people problem.</span>
+            </p>
+
+          </div>
+
+          <div class="about-copy reveal">
+
+            <p>
+              I work at the intersection of business strategy,
+              governance, human capital and organizational systems.
+            </p>
+
+            <p>
+              My approach is practical: understand the business,
+              identify the real constraint, design the system,
+              clarify accountability and make execution measurable.
+            </p>
+
+            <p>
+              The goal is not to create more bureaucracy.
+              The goal is to create an organization where people
+              can make better decisions and the business can grow
+              with greater control.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         CAPABILITIES
+    ========================== -->
+
+    <section id="capabilities">
+
+      <div class="container">
+
+        <div class="section-label reveal">
+          02 — What I Solve
+        </div>
+
+        <h2 class="section-title reveal">
+          From organizational problems<br>
+          to business architecture.
+        </h2>
+
+        <p class="section-intro reveal">
+          I focus on the systems behind performance — not only the
+          symptoms visible on the surface.
+        </p>
+
+
+        <div class="capability-grid">
+
+          <article class="capability-card reveal">
+            <div class="number">01</div>
+            <h3>Business Strategy</h3>
+            <p>
+              Translating business direction into practical priorities,
+              execution frameworks and measurable outcomes.
+            </p>
+          </article>
+
+          <article class="capability-card reveal">
+            <div class="number">02</div>
+            <h3>Governance & GRC</h3>
+            <p>
+              Strengthening authority, accountability, controls,
+              decision-making and organizational governance.
+            </p>
+          </article>
+
+          <article class="capability-card reveal">
+            <div class="number">03</div>
+            <h3>Business Systems</h3>
+            <p>
+              Designing structures, processes and operating systems
+              that support scalable execution.
+            </p>
+          </article>
+
+          <article class="capability-card reveal">
+            <div class="number">04</div>
+            <h3>Human Capital</h3>
+            <p>
+              Connecting people strategy with business requirements,
+              performance and organizational capability.
+            </p>
+          </article>
+
+          <article class="capability-card reveal">
+            <div class="number">05</div>
+            <h3>Performance Architecture</h3>
+            <p>
+              Building practical KPI, accountability and review
+              mechanisms that drive execution.
+            </p>
+          </article>
+
+          <article class="capability-card reveal">
+            <div class="number">06</div>
+            <h3>Organizational Transformation</h3>
+            <p>
+              Helping organizations move from fragmented execution
+              toward clearer, more integrated operating systems.
+            </p>
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         BUSINESS CASES
+    ========================== -->
+
+    <section id="cases">
+
+      <div class="container">
+
+        <div class="section-label reveal">
+          03 — Selected Business Cases
+        </div>
+
+        <h2 class="section-title reveal">
+          Real problems.<br>
+          Practical interventions.
+        </h2>
+
+        <p class="section-intro reveal">
+          Selected examples of organizational and business-system
+          work across different operating environments.
+        </p>
+
+
+        <div class="case-list">
+
+          <article class="case reveal">
+
+            <div class="case-number">CASE 01</div>
+
+            <div>
+              <h3>Retail Business System</h3>
+              <p>
+                Integrated HR, sales performance, store controls,
+                customer journey, operational discipline and margin
+                improvement into a single management perspective.
+              </p>
+            </div>
+
+            <div class="case-result">
+              Focus: Margin & Execution
+            </div>
+
+          </article>
+
+
+          <article class="case reveal">
+
+            <div class="case-number">CASE 02</div>
+
+            <div>
+              <h3>HR Governance & Organizational Architecture</h3>
+              <p>
+                Redesigned organizational structures, SOP architecture,
+                recruitment flow, accountability and workforce systems
+                across a multi-unit business.
+              </p>
+            </div>
+
+            <div class="case-result">
+              Focus: Scale & Control
+            </div>
+
+          </article>
+
+
+          <article class="case reveal">
+
+            <div class="case-number">CASE 03</div>
+
+            <div>
+              <h3>HR as a Governance Function</h3>
+              <p>
+                Identified the relationship between HR authority,
+                organizational structure, management interference,
+                accountability and governance risk.
+              </p>
+            </div>
+
+            <div class="case-result">
+              Focus: Authority & Risk
+            </div>
+
+          </article>
+
+
+          <article class="case reveal">
+
+            <div class="case-number">CASE 04</div>
+
+            <div>
+              <h3>Business Systems & Governance Architecture</h3>
+              <p>
+                Developed an integrated perspective connecting strategy,
+                leadership, governance, human capital, process,
+                compliance and performance.
+              </p>
+            </div>
+
+            <div class="case-result">
+              Focus: Architecture
+            </div>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         FRAMEWORKS
+    ========================== -->
+
+    <section id="frameworks" class="framework-section">
+
+      <div class="container">
+
+        <div class="section-label reveal">
+          04 — Intellectual Frameworks
+        </div>
+
+        <h2 class="section-title reveal">
+          Thinking in systems,<br>
+          not isolated functions.
+        </h2>
+
+        <p class="section-intro reveal">
+          Frameworks developed to simplify complex organizational
+          problems and make management decisions more structured.
+        </p>
+
+
+        <div class="framework-grid">
+
+          <article class="framework-main reveal">
+
+            <div>
+
+              <span class="framework-tag">
+                ISLA™
+              </span>
+
+              <h3>
+                Integrated Strategic
+                Leadership Architecture
+              </h3>
+
+              <p>
+                A framework connecting the major elements that
+                determine organizational performance.
+              </p>
+
+            </div>
+
+            <div class="framework-formula">
+              Strategy × Leadership × Governance × Human Capital
+              × Process × Compliance × Performance
+            </div>
+
+          </article>
+
+
+          <div class="framework-side">
+
+            <article class="framework-small reveal">
+
+              <span class="framework-tag">
+                Business Blind Spot™
+              </span>
+
+              <h3>
+                The hidden problem behind visible symptoms.
+              </h3>
+
+              <p>
+                A perspective for identifying when organizations
+                misdiagnose system problems as people problems.
+              </p>
+
+            </article>
+
+
+            <article class="framework-small reveal">
+
+              <span class="framework-tag">
+                System Drives Performance
+              </span>
+
+              <h3>
+                Better systems create better execution.
+              </h3>
+
+              <p>
+                Performance becomes more sustainable when expectations,
+                authority, processes and measurement are connected.
+              </p>
+
+            </article>
+
+
+            <article class="framework-small reveal">
+
+              <span class="framework-tag">
+                4 No — 7 Do's — 9 Pillars
+              </span>
+
+              <h3>
+                Accountability Architecture
+              </h3>
+
+              <p>
+                A practical management framework built around
+                eliminating excuses, defining obligations and
+                establishing measurable standards.
+              </p>
+
+            </article>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         JOURNEY
+    ========================== -->
+
+    <section id="journey">
+
+      <div class="container">
+
+        <div class="section-label reveal">
+          05 — Professional Journey
+        </div>
+
+        <h2 class="section-title reveal">
+          From managing people<br>
+          to designing systems.
+        </h2>
+
+        <p class="section-intro reveal">
+          A career journey across accounting, IT, recruitment,
+          human resources and executive business consulting.
+        </p>
+
+
+        <div class="timeline">
+
+          <article class="timeline-item reveal">
+
+            <div class="timeline-dot"></div>
+
+            <div class="timeline-year">
+              EARLIER CAREER
+            </div>
+
+            <h3>
+              Accounting & Business Administration
+            </h3>
+
+            <p>
+              Built foundational understanding of financial,
+              administrative and operational business processes.
+            </p>
+
+          </article>
+
+
+          <article class="timeline-item reveal">
+
+            <div class="timeline-dot"></div>
+
+            <div class="timeline-year">
+              2014+
+            </div>
+
+            <h3>
+              Human Resources & Recruitment
+            </h3>
+
+            <p>
+              Developed experience across recruitment, workforce
+              management, HR operations and organizational development.
+            </p>
+
+          </article>
+
+
+          <article class="timeline-item reveal">
+
+            <div class="timeline-dot"></div>
+
+            <div class="timeline-year">
+              2019+
+            </div>
+
+            <h3>
+              HR Management & Organizational Systems
+            </h3>
+
+            <p>
+              Moved beyond transactional HR toward organizational
+              architecture, SOPs, performance systems and governance.
+            </p>
+
+          </article>
+
+
+          <article class="timeline-item reveal">
+
+            <div class="timeline-dot"></div>
+
+            <div class="timeline-year">
+              2022+
+            </div>
+
+            <h3>
+              Executive Business & Governance Consulting
+            </h3>
+
+            <p>
+              Established a broader consulting perspective connecting
+              business systems, governance, human capital and strategy.
+            </p>
+
+          </article>
+
+
+          <article class="timeline-item reveal">
+
+            <div class="timeline-dot"></div>
+
+            <div class="timeline-year">
+              TODAY
+            </div>
+
+            <h3>
+              Business Systems & Governance Advisor
+            </h3>
+
+            <p>
+              Helping owners and executive teams make better decisions,
+              strengthen governance and build organizations that can scale.
+            </p>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         INSIGHTS
+    ========================== -->
+
+    <section id="insights">
+
+      <div class="container">
+
+        <div class="section-label reveal">
+          06 — Insights
+        </div>
+
+        <h2 class="section-title reveal">
+          Ideas for leaders<br>
+          who want to see deeper.
+        </h2>
+
+        <p class="section-intro reveal">
+          Selected thinking around business systems, governance,
+          leadership, human capital and organizational performance.
+        </p>
+
+
+        <div class="insights-grid">
+
+          <article class="insight-card reveal">
+
+            <div>
+
+              <div class="insight-category">
+                ISLA Insight™
+              </div>
+
+              <h3>
+                Developing Sustainable Strategic Leadership
+              </h3>
+
+            </div>
+
+            <a
+              href="https://forisaabadijayasejahtera.github.io/ISLA-Insight/"
+              target="_blank"
+              rel="noopener noreferrer">
+              Read on ISLA INSIGHT →
+            </a>
+
+          </article>
+
+
+          <article class="insight-card reveal">
+
+            <div>
+
+              <div class="insight-category">
+                ISLA Center
+              </div>
+
+              <h3>
+                An independent knowledge platform dedicated to advancing better governance, risk management, and compliance practices for organizations.
+              </h3>
+
+            </div>
+
+            <a
+              href="https://sites.google.com/view/isla-center/"
+              target="_blank"
+              rel="noopener noreferrer">
+              Read on ISLA Center →
+            </a>
+
+          </article>
+
+
+          <article class="insight-card reveal">
+
+            <div>
+
+              <div class="insight-category">
+                Business Systems
+              </div>
+
+              <h3>
+                Scale Without Chaos.
+              </h3>
+
+            </div>
+
+            <a
+              href="https://www.linkedin.com/newsletters/scale-without-chaos%E2%84%A2-7455506768819822592/"
+              target="_blank"
+              rel="noopener noreferrer">
+              Read on LinkedIn →
+            </a>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         CONTACT CTA
+    ========================== -->
+
+    <section class="cta" id="contact">
+
+      <div class="container reveal">
+
+        <div class="section-label">
+          07 — Let's Talk
+        </div>
+
+        <h2>
+          Better decisions start
+          with better questions.
+        </h2>
+
+        <p>
+          If you're dealing with organizational complexity,
+          governance gaps, unclear accountability or a business
+          that is growing faster than its systems — let's talk.
+        </p>
+
+        <div class="hero-actions" style="justify-content:center;">
+
+          <a
+            href="mailto:yantogoutama.office@gmail.com"
+            class="btn btn-primary">
+            Email Me
+          </a>
+
+          <a
+            href="https://www.linkedin.com/in/yanto-goutama"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn-secondary">
+            LinkedIn →
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- =========================
+       FOOTER
+  ========================== -->
+
+  <footer>
+
+    <div class="container footer-inner">
+
+      <div>
+        <div class="footer-name">
+          YANTO<span> GOUTAMA</span>
+        </div>
+
+        <div class="footer-copy">
+          Business Systems & Governance Advisor
+        </div>
+      </div>
+
+
+      <div class="footer-links">
+
+        <a href="#about">About</a>
+        <a href="#cases">Cases</a>
+        <a href="#frameworks">Frameworks</a>
+        <a href="#contact">Contact</a>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+
+  <!-- =========================
+       JAVASCRIPT
+  ========================== -->
+
+  <script>
+
+    /* =========================
+       NAVIGATION SCROLL EFFECT
+    ========================== */
+
+    const header = document.getElementById("header");
+
+    window.addEventListener("scroll", () => {
+
+      if (window.scrollY > 30) {
+        header.classList.add("scrolled");
+      } else {
+        header.classList.remove("scrolled");
+      }
+
+    });
+
+
+    /* =========================
+       MOBILE MENU
+    ========================== */
+
+    const menuBtn = document.getElementById("menuBtn");
+    const navLinks = document.getElementById("navLinks");
+
+    menuBtn.addEventListener("click", () => {
+      navLinks.classList.toggle("active");
+
+      menuBtn.textContent =
+        navLinks.classList.contains("active")
+          ? "✕"
+          : "☰";
+    });
+
+
+    /* Close mobile menu after clicking */
+
+    document.querySelectorAll(".nav-links a").forEach(link => {
+
+      link.addEventListener("click", () => {
+
+        navLinks.classList.remove("active");
+        menuBtn.textContent = "☰";
+
+      });
+
+    });
+
+
+    /* =========================
+       SCROLL REVEAL
+    ========================== */
+
+    const revealElements =
+      document.querySelectorAll(".reveal");
+
+    const revealObserver =
+      new IntersectionObserver(
+
+        (entries, observer) => {
+
+          entries.forEach(entry => {
+
+            if (entry.isIntersecting) {
+
+              entry.target.classList.add("visible");
+
+              observer.unobserve(entry.target);
+
+            }
+
+          });
+
+        },
+
+        {
+          threshold: 0.12
+        }
+
+      );
+
+
+    revealElements.forEach(element => {
+      revealObserver.observe(element);
+    });
+
+
+    /* =========================
+       ACTIVE NAVIGATION
+    ========================== */
+
+    const sections =
+      document.querySelectorAll("section[id]");
+
+    const navItems =
+      document.querySelectorAll(".nav-links a");
+
+    const activeObserver =
+      new IntersectionObserver(
+
+        entries => {
+
+          entries.forEach(entry => {
+
+            if (entry.isIntersecting) {
+
+              navItems.forEach(item => {
+                item.style.color = "";
+              });
+
+              const active =
+                document.querySelector(
+                  `.nav-links a[href="#${entry.target.id}"]`
+                );
+
+              if (active) {
+                active.style.color = "var(--accent)";
+              }
+
+            }
+
+          });
+
+        },
+
+        {
+          rootMargin: "-35% 0px -55% 0px"
+        }
+
+      );
+
+
+    sections.forEach(section => {
+      activeObserver.observe(section);
+    });
+
+
+    /* =========================
+       CURRENT YEAR
+    ========================== */
+
+    const year = new Date().getFullYear();
+
+    const footerCopy =
+      document.querySelector(".footer-copy");
+
+    if (footerCopy) {
+      footerCopy.innerHTML =
+        `Business Systems & Governance Advisor · ${year}`;
+    }
+
+  </script>
+
+</body>
+</html>
